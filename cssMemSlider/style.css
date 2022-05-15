@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #545454;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 0.01%;
+  height: 0.01%;
+  margin: -1%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 50%;
+  height: 70%;
+  background-color: slategrey;
+  box-shadow: 0.2em 0.2em 1.2em 0.1em rgba(13, 13, 13, 0.3);
+}
+
+.slides {
+  width: 100%;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.input_container {
+  display: flex;
+}
+
+.slide__label {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #c0c0c0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slide__input {
+  display: none;
+}
+
+.slide__img {
+  display: none;
+  padding: 12px;
+  border: 1px solid #c0c0c0;
+  background: #ffffff;
+}
+
+.slide__input:checked + label {
+  color: #000000;
+  border: 1px solid #c0c0c0;
+  border-bottom: 1px solid #ffffff;
+  background: #ffffff;
+}
+
+#slide__input_1:checked ~ .slide__img_1,
+#slide__input_2:checked ~ .slide__img_2,
+#slide__input_3:checked ~ .slide__img_3,
+#slide__input_4:checked ~ .slide__img_4 {
+  display: block;
+}
