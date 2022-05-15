@@ -91,6 +91,7 @@ body {
   margin-bottom: 10%;
   box-shadow: 0 0 2em 1.5em rgba(255, 255, 255, 0.15);
   border-radius: 5%;
+  border: 0.3vw solid #272727;
   height: 70%;
 }
 
@@ -126,6 +127,11 @@ body {
   ~ .info-container
   .label-container
   .slide__label_04
+  .button,
+#slide__input_5:checked
+  ~ .info-container
+  .label-container
+  .slide__label_05
   .button {
   border: 0.1rem solid #ffffff;
   background: #ffffff;
@@ -135,7 +141,8 @@ body {
 #slide__input_1:checked ~ .img-container .slide__img_1,
 #slide__input_2:checked ~ .img-container .slide__img_2,
 #slide__input_3:checked ~ .img-container .slide__img_3,
-#slide__input_4:checked ~ .img-container .slide__img_4 {
+#slide__input_4:checked ~ .img-container .slide__img_4,
+#slide__input_5:checked ~ .img-container .slide__img_5 {
   opacity: 1;
   animation-name: right;
 }
@@ -143,9 +150,40 @@ body {
 #slide__input_1:checked ~ .info-container .channel .channel-name-1,
 #slide__input_2:checked ~ .info-container .channel .channel-name-2,
 #slide__input_3:checked ~ .info-container .channel .channel-name-3,
-#slide__input_4:checked ~ .info-container .channel .channel-name-4 {
+#slide__input_4:checked ~ .info-container .channel .channel-name-4,
+#slide__input_5:checked ~ .info-container .channel .channel-name-5 {
   opacity: 1;
   animation-name: opacity;
+}
+
+#slide__input_1:checked
+  ~ .info-container
+  .label-container
+  .slide__label_01:hover
+  .button,
+#slide__input_2:checked
+  ~ .info-container
+  .label-container
+  .slide__label_02:hover
+  .button,
+#slide__input_3:checked
+  ~ .info-container
+  .label-container
+  .slide__label_03:hover
+  .button,
+#slide__input_4:checked
+  ~ .info-container
+  .label-container
+  .slide__label_04:hover
+  .button,
+#slide__input_5:checked
+  ~ .info-container
+  .label-container
+  .slide__label_05:hover
+  .button {
+  background-color: #ff9d00;
+  border-color: #ff9d00;
+  box-shadow: 0.2em 0.2em 1.2em 0.1em rgba(255, 157, 0, 0.3);
 }
 
 .img {
@@ -178,6 +216,7 @@ body {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   font-size: 2.5vw;
+  /* font-size: 300%; */
   opacity: 0;
   animation: 0.2s ease-in-out;
 }
@@ -188,6 +227,7 @@ body {
   background: repeating-linear-gradient(#494948, black 10%, #494948 10%);
   border: 0.3rem solid rgb(24, 24, 23);
   box-shadow: inset 0 0 3rem rgba(24, 24, 23, 0.7);
+  border-radius: 10%;
 }
 
 .label-container {
@@ -213,8 +253,8 @@ body {
 }
 
 .slide__label:hover .button {
-  background-color: deepskyblue;
-  border: 0.1rem solid deepskyblue;
+  background-color: #eac589;
+  border: 0.1rem solid #eac589;
 }
 
 .slide__label:active .button {
