@@ -25,9 +25,11 @@ body {
 
 .container {
   width: 50%;
-  height: 70%;
+  height: 50vw;
   background-color: slategrey;
   box-shadow: 0.2em 0.2em 1.2em 0.1em rgba(13, 13, 13, 0.3);
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
 .slides {
@@ -42,8 +44,8 @@ body {
 
 .slide__label {
   display: block;
-  width: 2rem;
-  height: 2rem;
+  width: 3vw;
+  height: 3vw;
   border: 0.1rem solid #ffffff;
   background: transparent;
   cursor: pointer;
@@ -55,13 +57,29 @@ body {
   display: none;
 }
 
+.img-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
 .slide__img {
-  opacity: 0;
-  padding: 12px;
-  border: 1px solid #ffffff;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  /* opacity: 0; */
   background: #ffffff;
   transition: all 0.5s;
-  transform: translateX(100%);
+  /* transform: translateX(100%); */
+  animation: 0.2s ease-in-out;
 }
 
 .label-container {
@@ -91,6 +109,24 @@ body {
 #slide__input_2:checked ~ .img-container .slide__img_2,
 #slide__input_3:checked ~ .img-container .slide__img_3,
 #slide__input_4:checked ~ .img-container .slide__img_4 {
-  opacity: 1;
-  transform: translateX(0);
+  animation-name: right;
+  /* opacity: 1; */
+  order: 5;
+}
+
+@keyframes right {
+  from {
+    transform: translateX(100%);
+    /* opacity: 0; */
+  }
+  to {
+    transform: translateX(0);
+    /* opacity: 1; */
+  }
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
