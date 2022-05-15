@@ -56,19 +56,21 @@ body {
 }
 
 .slide__img {
-  display: none;
+  opacity: 0;
   padding: 12px;
   border: 1px solid #ffffff;
   background: #ffffff;
+  transition: all 0.5s;
+  transform: translateX(100%);
+}
+
+.label-container {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .slide__label {
   transition: all 0.3s;
-  margin-right: 0.5rem;
-}
-
-.mr0 {
-  margin-right: 0;
 }
 
 .slide__label:hover {
@@ -76,16 +78,19 @@ body {
   border: 0.1rem solid deepskyblue;
 }
 
-.slide__input:checked + label {
-  color: #000000;
+#slide__input_1:checked ~ .label-container .slide__label_01,
+#slide__input_2:checked ~ .label-container .slide__label_02,
+#slide__input_3:checked ~ .label-container .slide__label_03,
+#slide__input_4:checked ~ .label-container .slide__label_04 {
   border: 0.1rem solid #ffffff;
   background: #ffffff;
   box-shadow: 0.2em 0.2em 1.2em 0.1em rgba(255, 255, 255, 0.3);
 }
 
-#slide__input_1:checked ~ .slide__img_1,
-#slide__input_2:checked ~ .slide__img_2,
-#slide__input_3:checked ~ .slide__img_3,
-#slide__input_4:checked ~ .slide__img_4 {
-  display: block;
+#slide__input_1:checked ~ .img-container .slide__img_1,
+#slide__input_2:checked ~ .img-container .slide__img_2,
+#slide__input_3:checked ~ .img-container .slide__img_3,
+#slide__input_4:checked ~ .img-container .slide__img_4 {
+  opacity: 1;
+  transform: translateX(0);
 }
