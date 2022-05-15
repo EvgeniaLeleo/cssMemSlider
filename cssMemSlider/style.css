@@ -44,10 +44,11 @@ body {
   display: block;
   width: 2rem;
   height: 2rem;
-  border: 1px solid #c0c0c0;
+  border: 0.1rem solid #ffffff;
   background: transparent;
   cursor: pointer;
   border-radius: 50%;
+  box-shadow: 0.2em 0.2em 1.2em 0.1em rgba(13, 13, 13, 0.3);
 }
 
 .slide__input {
@@ -57,15 +58,29 @@ body {
 .slide__img {
   display: none;
   padding: 12px;
-  border: 1px solid #c0c0c0;
+  border: 1px solid #ffffff;
   background: #ffffff;
+}
+
+.slide__label {
+  transition: all 0.3s;
+  margin-right: 0.5rem;
+}
+
+.mr0 {
+  margin-right: 0;
+}
+
+.slide__label:hover {
+  background-color: deepskyblue;
+  border: 0.1rem solid deepskyblue;
 }
 
 .slide__input:checked + label {
   color: #000000;
-  border: 1px solid #c0c0c0;
-  border-bottom: 1px solid #ffffff;
+  border: 0.1rem solid #ffffff;
   background: #ffffff;
+  box-shadow: 0.2em 0.2em 1.2em 0.1em rgba(255, 255, 255, 0.3);
 }
 
 #slide__input_1:checked ~ .slide__img_1,
