@@ -13,11 +13,9 @@ body {
 }
 
 .visually-hidden {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  width: 0.01%;
-  height: 0.01%;
-  margin: -1%;
+  font-size: 0;
+  width: 0.001%;
+  height: 0.001%;
 }
 
 .center {
@@ -30,8 +28,8 @@ body {
 /* TV */
 
 .tv {
-  width: 85vmin;
-  height: 85vmin;
+  width: 90vmin;
+  height: 90vmin;
   display: grid;
   grid-template-columns: 15% 15% 40% 15% 15%;
   grid-template-rows: 97% 3%;
